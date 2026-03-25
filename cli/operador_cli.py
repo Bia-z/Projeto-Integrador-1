@@ -1,0 +1,1 @@
+#interface do terminal para o operador
