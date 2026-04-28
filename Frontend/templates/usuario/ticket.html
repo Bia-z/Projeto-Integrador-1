@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Reportar ocorrência</title>
 </head>
-<body class="body-ticket">
+<body>
 
     <!--container principal-->
-    <form method="POST" action="/criar_ocorrencia">
+    <main class="container-ticket">
 
-        <main class="container-ticket">
+        <!--- <input type="checkbox" id="toggle-info" hidden> -->
+        <h1 class="titulo-com-info">
+            Reportar ocorrência
+            <!--<label for="toggle-info" class="info-coin">?</label> -->
+        </h1>
+       
+        <!--campos principais-->
+        <form method="POST" action="{{ url_for('usuario.criar_ocorrencia') }}">
 
-           <!--- <input type="checkbox" id="toggle-info" hidden> -->
-            <h1 class="titulo-com-info">
-                Reportar ocorrência
-                <!--<label for="toggle-info" class="info-coin">?</label> -->
-            </h1>
-           
-           <!--campos principais-->
             <div class="linha-form"> 
 
-             <div class="input-assunto">
-                <input name="titulo" placeholder="Assunto" required> 
-            </div>
+                <div class="input-assunto">
+                    <input name="titulo" placeholder="Assunto" required> 
+                </div>
 
                 <!--prioridade-->
                 <div class="input-prioridade">  
@@ -38,9 +38,8 @@
                 </div>
 
                 <div class="input-prioridade"> 
-
                     <select name="urgencia">
-                        <option value="Uegência" disabled selected>Urgência</option>
+                        <option value="Urgência" disabled selected>Urgência</option>
                         <option value="Alta">Alta</option>
                         <option value="Média">Média</option>
                         <option value="Baixa">Baixa</option>
@@ -61,7 +60,6 @@
 
     </main>
 
-
 <!--<script>
   const popup = document.getElementById("popup");
   const abrir = document.getElementById("abrirPopup");
@@ -72,7 +70,6 @@
   fechar.addEventListener("click", () => {
     popup.classList.add("hidden");
   });
-
 </script>-->
 
 </body>

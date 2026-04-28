@@ -1,6 +1,0 @@
-#lista de bibliotecas externas necessárias
-
-pymysql==1.1.0 
-#biblioteca que liga o python ao MySQL - conecta no banco
-python-dotenv==1.0.0
-#biblioteca que le o load_dotenv() - carrega as config

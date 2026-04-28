@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Cadastre-se</title>
 </head>
 <body class="body-register">
@@ -13,7 +13,6 @@
             <p>Preencha os campos abaixo para se registrar.</p>
         </div>
 
-
         <form method="POST">
             {{ form.hidden_tag() }}
 
@@ -22,11 +21,9 @@
                 {{ form.first_name.label }} 
                 {{ form.first_name() }} 
         
-
                 {{ form.last_name.label }} 
                 {{ form.last_name() }} 
             
-
                 {{ form.email.label }} 
                 {{ form.email() }} 
 
@@ -43,12 +40,11 @@
 
                 {{ form.confirm.label }} 
                 {{ form.confirm() }}
-        </div>
+            </div>
 
             {{ form.submit(class_="cadastrar") }}
 
-
-    </form>
-
+        </form>
+    </div>
 </body>
 </html>

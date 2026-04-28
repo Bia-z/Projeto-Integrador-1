@@ -15,13 +15,16 @@ class Database:
     
     def connect(self):
         try:
+            print(f"Tentando conectar: host={Config.DB_HOST}, port={Config.DB_PORT}, user={Config.DB_USER}, db={Config.DB_NAME}")
             self.connection = mysql.connector.connect(
                 host=Config.DB_HOST,
                 port=Config.DB_PORT,
                 user=Config.DB_USER,
                 password=Config.DB_PASSWORD,
-                database=Config.DB_NAME
+                database=Config.DB_NAME,
+                use_pure=True
             )
+            print("Conectado com sucesso!")
             return self.connection
         except Error as e:
             print(f"Erro ao conectar: {e}")

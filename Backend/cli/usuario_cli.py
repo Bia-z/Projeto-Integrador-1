@@ -1,1 +1,0 @@
-#interface no terminal do usuário
